@@ -1,0 +1,25 @@
+<poke-search (emmitSearch)="getSearch($event)"></poke-search>
+<section class="listagem">
+    <a [routerLink]="['details', row.id]" class="pokemon" *ngFor="let row of pokelist">
+        <section class="pokemon__status">
+            <h2>{{row.name}}
+
+            </h2>
+            
+            <ul>
+                <li *ngFor="let type of row.types">{{type}}</li>
+            </ul>
+        </section>
+
+        <section class="pokemon__img">
+            <img class="fadeIn" [src]="row.url" [alt]="row.name">
+            <!-- <img class="fadeIn" src="/src/assets/pokemon1.png"> -->
+        </section>
+    </a>
+</section>
+        <img
+            src="assets/error.png"
+            alt="Deu erro na mostragem do pokemon"
+            width="100%"
+            *ngIf="isError"
+        > 

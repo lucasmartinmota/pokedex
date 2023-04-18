@@ -1,0 +1,180 @@
+@import '../../../config-scss/rem-calc.scss';
+
+$padding: 1.25rem;
+
+    .listagem{
+    display: flex;
+    justify-content: space-between;
+    padding: $padding 0;
+    flex-wrap: wrap;
+    .pokemon{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    width: calc(49% - 50px);
+    height: 5.625rem;
+    position: relative;
+    margin-bottom: 0.625rem;
+    
+    background: var(--branco);
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+        .fadeIn{
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    }
+    @keyframes fadeIn {
+    0% {opacity: 0;}
+  
+}
+
+
+
+
+
+
+
+        &__status{
+            h2{
+                font-size: 1.375rem;
+                font-weight: 700;
+                margin-bottom: 5px;
+                text-transform: capitalize;
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                li{
+                    background: var(--cinza);
+                    font-size: 0.625rem;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    border-radius: 0.625rem;
+                    width: 3.125rem;
+                    margin-bottom: 3px;
+                }
+            }
+        }
+        
+        &__img{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: absolute;
+            height: 5.625rem;
+            width: 6.875rem;
+
+            bottom:  1.25rem;
+            right: 1.25rem;
+
+            background: url('../../../assets/bg/bg.svg') no-repeat;
+
+            img{
+                width: 3.125rem;
+            }
+        }
+}}
+
+
+@media (max-width: 920px) {
+    .listagem{
+        display: block;
+        justify-content: center;
+        padding: $padding 0;
+        flex-wrap: wrap;
+        align-items: center;
+        // margin-left: rem-calc(120);
+        .pokemon{
+        
+        text-decoration: none;
+        color: black;
+        display: flex;
+        width: 34.375rem;
+        height: 12.5rem;
+        position: relative;
+        margin-bottom: 0.625rem;
+        
+        background: var(--branco);
+        padding: 1.25rem;
+        border-radius: 0.625rem;
+            .fadeIn{
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        }
+        @-webkit-keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+        }
+        @keyframes fadeIn {
+        0% {opacity: 0;}
+      
+    }
+    
+    
+    
+    
+    
+    
+    
+            &__status{
+                h2{
+                    font-size: 3.125rem;
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                    text-transform: capitalize;
+                }
+                ul{
+                    display: block;
+                    flex-direction: column;
+                    li{
+                        background: var(--cinza);
+                        font-size: 1.563rem;
+    
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        border-radius: 2.188rem;
+                        width: 6.25;
+                        margin-bottom: 5px;
+                        height: 2rem;                   
+                    }
+                }
+            }
+            
+            &__img{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+    
+                position: absolute;
+                height: 10rem;
+                width: 11.25rem;
+    
+                bottom:  1.25rem;
+                right: 1.25rem;
+    
+                background: url('../../../assets/bg/bg.svg') no-repeat;
+    
+                img{
+                    width: 11.875rem;
+                }
+            }
+    }}
+    }
